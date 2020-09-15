@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import React from "react"
-export const PaginationWrapper = styled.div()`
+
+export const PaginationWrapper = styled.div`
   grid-column: 2 / span 12;
   display: flex;
   align-items: center;
