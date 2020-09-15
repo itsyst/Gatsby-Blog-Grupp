@@ -1,13 +1,13 @@
 import React from "react"
-import { Container, FeatureImage, Content } from "../components"
-// import * as styles from "../elements"
+import { Container, FeatureImage, Content} from "../components"
+import { H1 } from "../elements"
 
 const IndexPage = () => {
   return (
     <Container>
       <FeatureImage />
       <Content>
-        <h1> Here goes all contents</h1>
+        <H1> Here goes all contents</H1>
       </Content>
     </Container>
   )
