@@ -3,6 +3,10 @@ export default {
         main: "Muli, sans-serif",
         code: "Roboto Mono, monospace",
     },
+    weights: {
+        light: "normal",
+        bold: "bold",
+    },
     colors: {
         main1: "hsl(207,70%,59%)",
         main2: "hsl(207,70%,94%)",
@@ -33,4 +37,9 @@ export default {
     shadows: {
         shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05)",
     },
+    heights: {
+        small: "0.5rem",
+        medium: "1.5rem",
+        large: "3rem",
+    }
 }

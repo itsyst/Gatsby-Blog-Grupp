@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, FeatureImage, Content} from "../components"
-import { H1 } from "../elements"
+import { H1, P } from "../elements"
 
 const IndexPage = () => {
   return (
@@ -8,6 +8,7 @@ const IndexPage = () => {
       <FeatureImage />
       <Content>
         <H1> Here goes all contents</H1>
+        <P>Testing</P>
       </Content>
     </Container>
   )
