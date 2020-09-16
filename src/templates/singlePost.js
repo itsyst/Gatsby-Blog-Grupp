@@ -17,9 +17,7 @@ const singlePost = ({ data }) => {
             </Post>
         </Container>
     )
-
 }
-
 export default singlePost
 
 export const pageQuery = graphql`
