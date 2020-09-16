@@ -1,10 +1,6 @@
 import React from "react"
-import { ContentWrapper } from "../elements"
+import { PostWrapper } from "../elements"
 
-export const Content = ({ children }) => {
-    return (
-        <ContentWrapper>
-            {children}
-        </ContentWrapper>
-    )
+export const Post = ({ children }) => {
+  return <PostWrapper>{children}</PostWrapper>
 }
