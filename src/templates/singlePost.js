@@ -25,13 +25,18 @@ const singlePost = ({ data }) => {
 export const pageQuery = graphql`
 query SinglePostQuery($id: String!) {
     mdx(id: { eq: $id }) {
-    body
-    frontmatter {date excerpt slug title
-        featureImage {
-            publicURL
-            childImageSharp {
-                fixed {
-                ...GatsbyImageSharpFixed
+        body
+        frontmatter {
+            date 
+            excerpt 
+            slug 
+            title
+            featureImage {
+                publicURL
+                childImageSharp {
+                    fixed {
+                    ...GatsbyImageSharpFixed
+                    }
                 }
             }
         }
