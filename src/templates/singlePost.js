@@ -20,26 +20,26 @@ const singlePost = ({ data }) => {
 
 }
 
- 
+export default singlePost
 
 export const pageQuery = graphql`
-query SinglePostQuery($id: String!) {
-    mdx(id: { eq: $id }) {
-        body
-        frontmatter {
-            date 
-            excerpt 
-            slug 
-            title
-            featureImage {
-                publicURL
-                childImageSharp {
-                    fixed {
-                    ...GatsbyImageSharpFixed
+    query SinglePostQuery($id: String!) {
+        mdx(id: { eq: $id }) {
+            body
+            frontmatter {
+                date 
+                excerpt 
+                slug 
+                title
+                featureImage {
+                    publicURL
+                    childImageSharp {
+                        fixed {
+                        ...GatsbyImageSharpFixed
+                        }
                     }
                 }
             }
         }
     }
-}
 `
