@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { H1} from "../elements"
-import { Container, Post, FeatureImage,SEO } from "../components"
+import { Container, Post, FeatureImage, Seo} from "../components"
 
 
 
@@ -12,7 +12,7 @@ const singlePost = ({ data }) => {
 
     return (
         <Container>
-            <SEO
+            <Seo
                 title={data.mdx.frontmatter.title}
                 image={seoImage}
                 description={data.mdx.frontmatter.excerpt}

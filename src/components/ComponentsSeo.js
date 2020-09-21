@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 export const Seo = ({ description, keywords, title, image, url, author }) => {
-    const site = "your-url.netlify.app"
+    const site = "yoururl.netlify.app"
 
     return (
         <StaticQuery
@@ -13,15 +13,9 @@ export const Seo = ({ description, keywords, title, image, url, author }) => {
                 const metaDescription = description
                     ? description
                     : data.site.siteMetadata.description
-                const metaTitle = title
-                    ? title
-                    : data.site.siteMetadata.title
-                const metaAuthor = author
-                    ? author
-                    : data.site.siteMetadata.author
-                const metaUrl = url
-                    ? url
-                    : data.site.siteMetadata.url
+                const metaTitle = title ? title : data.site.siteMetadata.title
+                const metaAuthor = author ? author : data.site.siteMetadata.author
+                const metaUrl = url ? url : data.site.siteMetadata.url
                 const metaImage = image
                     ? `${site}${image}`
                     : data.site.siteMetadata.image

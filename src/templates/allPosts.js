@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, Content, ContentCard, FeatureImage, Pagination,SEO } from "../components"
+import { Container, Content, ContentCard, FeatureImage, Pagination, Seo } from "../components"
+
 import { H1, P } from "../elements"
 //defines some variables for posts
 const allPosts = ({ pageContext, data }) => {
@@ -13,7 +14,7 @@ const allPosts = ({ pageContext, data }) => {
     const posts = data.allMdx.edges
     return (
         <Container>
-            <SEO/>
+            <Seo />
             <FeatureImage />
             <Content>
                 <H1 textAlign="center" margin="0 0 1rem 0">
