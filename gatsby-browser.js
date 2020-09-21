@@ -14,6 +14,19 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${props => props.theme.colors.light1};
     }
 `
+const components = {
+    table: Table,
+    pre: preProps => {
+        const props = preToCodeBlock(preProps)
+        // if there's a codeString and some props, we passed the test
+        if (props) {
+            return <Code {...props} />
+        }
+        // it's possible to have a pre without a code in it
+        return <pre {...preProps} />
+    },
+    wrapper: ({ children }) => <>{children}</>,
+}
 
 export const wrapRootElement = ({ element }) => (
     <ThemeProvider theme={Theme}>
