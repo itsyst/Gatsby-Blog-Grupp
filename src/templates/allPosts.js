@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import { Container, Content, ContentCard, FeatureImage, Pagination } from "../components"
 import { H1, P } from "../elements"
 //defines some variables for posts
-const allPosts = ({pageContext, data}) => {
-    const {currentPage, numPages} = pageContext
+const allPosts = ({ pageContext, data }) => {
+    const { currentPage, numPages } = pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
@@ -16,17 +16,17 @@ const allPosts = ({pageContext, data}) => {
             <FeatureImage />
             <Content>
                 <H1 textAlign="center" margin="0 0 1rem 0">
-                    Fake text here this is fake text wow fake so fake amazing
+                    Fake text here this is fake
                 </H1>
                 <P color="dark2" textAlign="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </P>
                 {posts.map(post => (
-                    <ContentCard 
+                    <ContentCard
                         key={post.node.frontmatter.slug}
                         date={post.node.frontmatter.date}
                         title={post.node.frontmatter.title}
@@ -35,7 +35,7 @@ const allPosts = ({pageContext, data}) => {
                     />
                 ))}
             </Content>
-            <Pagination 
+            <Pagination
                 isFirst={isFirst}
                 isLast={isLast}
                 prevPage={prevPage}

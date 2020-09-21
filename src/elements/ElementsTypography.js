@@ -4,9 +4,9 @@ export const H1 = styled.h1`
     color: ${props => {
         switch (props.color) {
             case "test":
-                return props.theme.colors.test;
+                return props.theme.colors.main1;
             default:
-                return props.theme.colors.test;
+                return props.theme.colors.main1;
             }
         }
     };
